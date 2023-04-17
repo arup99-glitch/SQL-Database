@@ -1,0 +1,24 @@
+SELECT CustomerName, City FROM Customers;
+SELECT CustomerName FROM Customers;
+SELECT DISTINCT Country FROM Customers;
+SELECT COUNT(DISTINCT Country) FROM Customers;
+SELECT Count(*) AS DistinctCountries
+FROM (SELECT DISTINCT Country FROM Customers);
+SELECT * FROM Customers
+WHERE Country='Germany';
+SELECT * FROM Customers
+WHERE CustomerID=1;
+SELECT * FROM Customers
+WHERE Country='Germany' AND City='Berlin';
+SELECT * FROM Customers
+WHERE Country='Germany' OR Country='Spain';
+SELECT * FROM Customers
+ORDER BY PostalCode;
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal','Tom B. Erichsen','Skagen 21','Stavanger','4006','Norway');
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+UPDATE Customers
+SET ContactName='Alfred Schmidt', City='Frankfurt'
+WHERE CustomerID=1;
