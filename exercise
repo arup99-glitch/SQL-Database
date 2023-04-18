@@ -22,3 +22,9 @@ WHERE Address IS NULL;
 UPDATE Customers
 SET ContactName='Alfred Schmidt', City='Frankfurt'
 WHERE CustomerID=1;
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+SELECT COUNT(ProductID)
+FROM Products;
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
